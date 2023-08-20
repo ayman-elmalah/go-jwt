@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "a0f42efc-d928-4f43-af39-e05b906f8bf1",
+		"name": "Go jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3749599"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ayman Elmalah",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ayman@elmalah.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{appUrl}}/api/v1/auth/register",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ayman@elmalah.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{appUrl}}/api/v1/auth/login",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ayman@elmalah.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{appUrl}}/api/v1/auth/user",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "appUrl",
+			"value": "http://127.0.0.1:8080",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "Bearer \"token\"",
+			"type": "string"
+		},
+		{
+			"key": "token1",
+			"value": "Bearer \"token\"",
+			"type": "string"
+		}
+	]
+}
