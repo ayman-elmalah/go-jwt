@@ -66,6 +66,28 @@ To start the project, use the following command:
 CompileDaemon -build="go build -o main main.go" -command="./main serve"
 ```
 
+## Database Migrations
+
+Follow these steps to create and manage database migrations:
+
+### Applying Migrations
+
+To apply migrations, use the following commands:
+
+- Migrate Up:
+
+```sh
+go run main.go migrate-up
+```
+
+- Migrate Down
+
+```sh
+go run main.go migrate-down
+```
+
+For more advanced migration features and options, refer to the [golang-migrate guide](https://github.com/golang-migrate/migrate).
+
 # Using Postman Collections
 
 To make it easier for developers to interact with the API, we've included a set of Postman collections in this project. You can find the collections in the `postman` directory, specifically `collection.json`. These collections provide pre-configured API requests that you can import into Postman for testing and exploring the endpoints.
