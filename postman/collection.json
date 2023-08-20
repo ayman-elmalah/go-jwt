@@ -161,11 +161,6 @@
 			"key": "token",
 			"value": "Bearer \"token\"",
 			"type": "string"
-		},
-		{
-			"key": "token1",
-			"value": "Bearer \"token\"",
-			"type": "string"
 		}
 	]
 }
